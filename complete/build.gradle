@@ -15,6 +15,7 @@ repositories {
     mavenLocal()
     mavenCentral()
     maven { url "https://jcenter.bintray.com" }
+    maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
 }
 
 dependencyManagement {
@@ -33,7 +34,7 @@ dependencies {
     implementation "io.micronaut:micronaut-runtime"
 
     //tag::graal[]
-    compileOnly "com.oracle.substratevm:svm:GraalVM-1.0.0-rc7"
+    compileOnly 'com.oracle.substratevm:svm:1.0.0-rc8'
     runtimeOnly "io.micronaut:micronaut-graal"
     //end::graal[]
 
